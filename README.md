@@ -26,6 +26,7 @@ The model should help manage the power purchase and supply efficiently by antici
 
 ## Project Structure
 Electricity-Demand-Prediction/
+
 ├── analysis.py              
 ├── app.py                  
 ├── column_transformer_m.sav

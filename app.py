@@ -56,26 +56,25 @@ if option == "Model Prediction":
     col1, col2, col3 = st.columns(3)
 
     with col1:
-        hour_of_day = st.number_input('Hour of Day', min_value=0, max_value=23, step=1)
-        day_of_week = st.number_input('Day of Week')
-        is_holiday = st.selectbox("Is Holiday?", ['Yes', 'No'])
-        season = st.selectbox("Season", ['Spring', 'Summer', 'Autumn', 'Winter'])
-        temperature = st.number_input("Temperature (°C)", min_value=-10, max_value=50, step=1)
+        hour_of_day = st.number_input('Hour of Day', min_value=0, max_value=23, step=1, value=15)
+        day_of_week = st.number_input('Day of Week', min_value=0, max_value=6, step=1, value=5)
+        is_holiday = st.selectbox("Is Holiday?", ['Yes', 'No'], index=1)
+        season = st.selectbox("Season", ['Spring', 'Summer', 'Autumn', 'Winter'], index=1)
+        temperature = st.number_input("Temperature (°C)", min_value=-10.0, max_value=50.0, step=0.1, value=44.71)
 
     with col2:
-        humidity = st.number_input("Humidity (%)", min_value=0, max_value=100, step=1)
-        wind_speed = st.number_input("Wind Speed (km/h)", min_value=0, max_value=100, step=1)
-        rainfall = st.number_input("Rainfall (mm)", min_value=0, max_value=200, step=1)
-        peak_demand_met = st.number_input('Peak Demand Met (MW)', min_value=0.0, step=0.1)
-        load_growth = st.number_input('Load Growth (%)', min_value=0.0, step=0.1)
+        humidity = st.number_input("Humidity (%)", min_value=0.0, max_value=100.0, step=0.1, value=56.13)
+        wind_speed = st.number_input("Wind Speed (km/h)", min_value=0.0, max_value=100.0, step=0.1, value=9.70)
+        rainfall = st.number_input("Rainfall (mm)", min_value=0.0, max_value=200.0, step=0.1, value=6.93)
+        peak_demand_met = st.number_input('Peak Demand Met (MW)', min_value=0.0, step=0.1, value=8546.78)
+        load_growth = st.number_input('Load Growth (%)', min_value=0.0, step=0.1, value=49.96)
 
     with col3:
-        energy_consumption = st.number_input('Energy Consumption (MUs)', min_value=0.0, step=0.1)
-        shedding = st.number_input('Shedding (MUs)', min_value=0.0, step=0.1)
-        shedding_percentage = st.number_input('Shedding as % of Energy Consumption', min_value=0.0, step=0.1)
-        transmission_losses = st.number_input('Transmission Losses (%)', min_value=0.0, step=0.1)
-        system_availability = st.number_input('System Availability (%)', min_value=0.0, max_value=100.0, step=0.1)
-
+        energy_consumption = st.number_input('Energy Consumption (MUs)', min_value=0.0, step=0.1, value=120.64)
+        shedding = st.number_input('Shedding (MUs)', min_value=0.0, step=0.1, value=33.50)
+        shedding_percentage = st.number_input('Shedding as % of Energy Consumption', min_value=0.0, step=0.1, value=27.77)
+        transmission_losses = st.number_input('Transmission Losses (%)', min_value=0.0, step=0.1, value=1.18)
+        system_availability = st.number_input('System Availability (%)', min_value=0.0, max_value=100.0, step=0.1, value=97.94)
     input_data = pd.DataFrame({
         'hour_of_day': [hour_of_day],
         'day_of_week': [day_of_week],

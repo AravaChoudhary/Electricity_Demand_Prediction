@@ -6,13 +6,10 @@ This project aims to develop an AI-based model for predicting electricity demand
 - [Problem Statement](#problem-statement)
 - [Project Structure](#project-structure)
 - [Model Information](#model-information)
-- [Installation](#installation)
-- [Usage](#usage)
 - [Model Inputs](#model-inputs)
 - [Streamlit UI](#streamlit-ui)
 - [Data Analysis (EDA)](#data-analysis-eda)
 - [Technologies Used](#technologies-used)
-- [License](#license)
 
 ## Problem Statement
 
@@ -56,6 +53,53 @@ Electricity-Demand-Prediction/
   - Shedding as % of Energy Consumption
   - Transmission Losses (%)
   - System Availability (%)
+
+## Model Inputs
+
+The following parameters can be set to make a prediction:
+
+	•	Hour of Day: The hour for which you want to project electricity demand (0-23).
+	•	Day of Week: The day of the week (0-6, where 0 = Monday).
+	•	Is Holiday: Whether it is a public holiday (Yes/No).
+	•	Season: The current season (Spring, Summer, Autumn, Winter).
+	•	Temperature: Temperature in °C.
+	•	Humidity: Humidity in %.
+	•	Wind Speed: Wind speed in km/h.
+	•	Rainfall: Rainfall in mm.
+	•	Peak Demand Met (MW): The peak demand met in MW.
+	•	Load Growth (%): The percentage load growth.
+	•	Energy Consumption (MUs): Energy consumption in MUs.
+	•	Shedding (MUs): Shedding in MUs.
+	•	Shedding as % of Energy Consumption: Shedding as a percentage of energy consumption.
+	•	Transmission Losses (%): Transmission losses as a percentage.
+	•	System Availability (%): System availability percentage.
+
+Click the “Predict” button to generate the forecast.
+
+## Streamlit UI
+
+	•	Model Prediction:
+	•	Provides an interface to input parameters and predict the electricity demand.
+	•	Data Analysis (EDA):
+	•	Offers various visualizations to understand the dataset.
+
+## Data Analysis (EDA)
+
+The EDA module provides insights into the dataset, including:
+
+	1.	Electricity Load by Hour of Day: A bar chart showing the total electricity load for each hour.
+	2.	Electricity Load During Holidays vs Non-Holidays: A line plot comparing the electricity load on holidays and non-holidays.
+	3.	Electricity Load Distribution Across Seasons: A boxplot showing load distribution across different seasons.
+
+## Technologies Used
+
+	•	Python
+	•	Streamlit
+	•	scikit-learn
+	•	Pandas
+	•	Matplotlib
+	•	Seaborn
+	•	Joblib
 
 
 ### Explanation:

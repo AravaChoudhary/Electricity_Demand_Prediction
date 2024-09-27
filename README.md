@@ -26,12 +26,12 @@ The model should help manage the power purchase and supply efficiently by antici
 
 ## Project Structure
 Electricity-Demand-Prediction/
-├── analysis.py              # Script containing EDA functions
-├── app.py                   # Main Streamlit app file
-├── column_transformer_m.sav # Trained Column Transformer for data preprocessing
-├── model_main.sav           # Trained Random Forest model
-├── data.csv                 # Dataset used for EDA and model training
-└── README.md                # Project documentation
+├── analysis.py              
+├── app.py                  
+├── column_transformer_m.sav
+├── model_main.sav           
+├── data.csv                 
+└── README.md               
 
 
 ## Model Information
